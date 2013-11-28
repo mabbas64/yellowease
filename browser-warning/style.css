@@ -1,0 +1,92 @@
+/* =Reset default browser CSS
+-------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+:focus {
+	outline: 0;
+}
+ol, ul {
+	list-style: none;
+}
+table {/* tables still need 'cellspacing="0"' in the markup */
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+}
+
+blockquote, q {
+	quotes: "" "";
+}
+a img {
+	border: 0;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+/* = Styles
+-------------------------------------------------------------- */
+body {
+    background: #494949;
+}
+.container {
+    width: 960px;
+    margin: auto;
+    position: relative;
+}
+#browser_warning {
+    width: 960px;
+    height: 569px;
+    background: transparent url('images/browser-warning.png') no-repeat;
+    position: absolute;
+    top: 77px;
+}
+#rec_browsers {
+    position: absolute;
+    top: 340px;
+    left: 40px;
+}
+#browser_warning a {
+    opacity: .9;
+    width: 220px;
+    height: 216px;
+    float: left;
+    display: block;
+    text-indent: -9999px;
+    border: 1px #EDEDED solid;
+}
+#browser_warning a:hover {
+    opacity: 1.0;
+}
+#browser_warning .chrome {
+    background: url('images/browser-warning-chrome.jpg') no-repeat;
+}
+#browser_warning .firefox {
+    background: url('images/browser-warning-firefox.jpg') no-repeat;
+}
+#browser_warning .safari {
+    background: url('images/browser-warning-safari.jpg') no-repeat;
+}
+#browser_warning .ie {
+    background: url('images/browser-warning-ie.jpg') no-repeat;
+}
