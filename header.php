@@ -1,4 +1,5 @@
 <?php 
+global $data;
 //Location handling
 $loc = checkLocationSetting();
 $urlloc = ( isset( $_GET['location'] ) || isset( $_GET['where'] ) ) ? true : false;
@@ -136,7 +137,7 @@ $urlloc = ( isset( $_GET['location'] ) || isset( $_GET['where'] ) ) ? true : fal
             <!--<li><a href="#" class="facebook">Facebook</a></li>
             <li><a href="#" class="twitter">Twitter</a></li> -->
           </ul>
-          <h1 class="logo"><a href="<?php echo site_url(); ?>">YellowEase</a></h1>
+          <h1 class="logo"><a href="<?php echo site_url(); ?>"><img src="<?php echo $data['logo2']; ?>" alt="<?php bloginfo('name'); ?>" /></a></h1>
         </div>
         <div class="header-holder">
           <span id="url_loc_set" style="display: none;" data-urlloc="<?php echo $urlloc; ?>"></span>
