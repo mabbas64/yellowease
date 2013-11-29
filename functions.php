@@ -1,7 +1,12 @@
 <?php 
-//Child Theme Functions
+if (!isset($_SESSION)){
 
-if (!isset($_SESSION)){ session_start(); }
+session_start(); }
+
+
+
+
+
 
 //Find users geolocation
 function checkLocationSetting() {
@@ -128,4 +133,13 @@ function my_scripts_method() {
 }
 
 add_action( 'wp_enqueue_scripts', 'my_scripts_method' );
+ /*
+  *
+  * Slightly Modified Options Framework
+ */
+require_once ('admin/index.php');
+//Child Theme Functions
+
+
+
 ?>
