@@ -52,9 +52,11 @@ if( function_exists( 'wp_get_theme' ) ) {
 
 
 if( !defined('ADMIN_PATH') )
-	define( 'ADMIN_PATH', get_template_directory() . '/admin/' );
+	define( 'ADMIN_PATH',  get_theme_root() .'/yellowease_template' . '/admin/' ); //was get_template_directory()  which points to Parent theme. We want it to point to child theme
+	// get_theme_root should return C:\xampp\htdocs\wordpress/wp-content/themes
+	// get_stylesheet_direcotry_uri() returns http://localhost/wordpress/wp-content/themes/yellowease_template =---- the http is problematic for admin_path, but works with admin_dir below
 if( !defined('ADMIN_DIR') )
-	define( 'ADMIN_DIR', get_template_directory_uri() . '/admin/' );
+	define( 'ADMIN_DIR', get_stylesheet_directory_uri() .'/admin/' ); //was get_template_directory_uri()  which points to Parent theme. We want it to point to child theme
 
 define( 'ADMIN_IMAGES', ADMIN_DIR . 'assets/images/' );
 
