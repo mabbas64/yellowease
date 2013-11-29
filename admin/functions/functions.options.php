@@ -821,8 +821,7 @@ $of_options[] = array( "name" => "Logo",
             "id" => "logo2",
             "std" => get_stylesheet_directory_uri() ."/images/logo.png",
             "mod" => "",
-            "type" => "media"); 
-print_r(get_stylesheet_directory_uri() ."/images/logo.png");
+            "type" => "media");  
 
 
 $of_options[] = array( 	"name" 		=> "Media Uploader 3.5",
