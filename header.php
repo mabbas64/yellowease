@@ -73,13 +73,13 @@ $urlloc = ( isset( $_GET['location'] ) || isset( $_GET['where'] ) ) ? true : fal
   font-family: 'Fjalla One', Helvetica, Arial, sans-serif;
 }
 
-body {
+/*body {
   font:15px/24px 'Quattrocento', Georgia, Times, serif;
-}
+}*/
 
-#locations_header ul a {
+/*#locations_header ul a {
   font-family: 'Varela Round', Arial, Helvetica, sans-serif;
-}
+}*/
 
 #city_search input[type="submit"] {
   font:15px/18px 'Varela Round', Arial, Helvetica, sans-serif;
@@ -97,9 +97,9 @@ body {
   font:normal 30px/30px 'Oxygen', Arial, Helvetica, sans-serif;
 }
 
-.search-form input[type="text"]{
+/*.search-form input[type="text"]{
   font:16px/20px 'Varela Round', Arial, Helvetica, sans-serif;
-}
+}*/
 
 <?php
 /////////// NAV FONTS
@@ -111,6 +111,8 @@ if(!$custom_font && $data['google_nav'] != 'Select Font') {
 if(isset($nav_font)):
 ?>
 
+#locations_header ul a,
+.search-form input[type="text"],
 #nav ul{
   font:13px/16px <?php echo $nav_font; ?>;
 }
@@ -125,10 +127,28 @@ if(!$custom_font && $data['google_headings'] != 'Select Font') {
 }
 if(isset($headings_font)):
 ?>
+
 #content h1,
-.columns-item h3{ /*fjalla one */
+.columns-item h3,
+#sidebar h3,
+#sidebar h4{ /*fjalla one */
   font-family: <?php echo $headings_font; ?>;
 } 
+
+<?php endif; 
+////////// BODY FONTS 
+
+if($data['google_body'] != 'Select Font') {
+  $body_font = '"'.$data['google_body'].'", Arial, Helvetica, sans-serif !important';
+} elseif($data['standard_body'] != 'Select Font') {
+  $body_font = $data['standard_body'].' !important';
+}
+
+if(isset($body_font)): ?>
+
+body{ /*'Quattrocento'*/
+  font-family:<?php echo $body_font; ?>;
+}
 
 <?php endif; 
 /////////////////////////////////////?>
@@ -228,13 +248,13 @@ font:30px/36px 'Fjalla One', Arial, Helvetica, sans-serif;
   font:16px/20px 'Fjalla One', Arial, Helvetica, sans-serif;
 }
 
-#sidebar h3{
+/*#sidebar h3{
   font:20px/24px 'Fjalla One', Arial, Helvetica, sans-serif;
 }
 
 #sidebar h4{
   font:15px/18px 'Fjalla One', Arial, Helvetica, sans-serif;
-} 
+} */
 
 .tagcloud{
   font:12px/23px 'Varela', Arial, Helvetica, sans-serif;
