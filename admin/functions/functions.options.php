@@ -794,6 +794,12 @@ if (!function_exists('of_options'))
             "Zeyada" => "Zeyada"
         );
 
+	/*$alter_stylesheets = array (
+			"style.css" => 'Default Stylesheet',
+			"style2.css" => 'Alternate Stylesheet 1',
+			"style3.css" => 'Alternate Stylesheet 2'
+		); */
+
 
 /*-----------------------------------------------------------------------------------*/
 /* The Options Array */
@@ -817,14 +823,21 @@ $of_options[] = array( 	"name" 		=> "Hello there!",
 				);
 
 $of_options[] = array( "name" => "Logo",
-            "desc" => "Please choose an image file for your logo. (338x110px)",
-            "id" => "logo2",
-            "std" => get_stylesheet_directory_uri() ."/images/logo.png",
-            "mod" => "",
-            "type" => "media");  
+			            "desc" => "Please choose an image file for your logo. (338x110px)",
+			            "id" => "logo2",
+			            "std" => get_stylesheet_directory_uri() ."/images/logo.png",
+			            "mod" => "",
+			            "type" => "media"); 
+
+/* $of_options[] = array( "name" => "Theme Stylesheet",
+						"desc" => "Select your theme's alternate color scheme",
+						"id" => "alter_stylesheet",
+						"std" => "Default Stylesheet",
+						"type" => "select",
+						"options" => $alter_stylesheets); */
 
 
-$of_options[] = array( 	"name" 		=> "Media Uploader 3.5",
+/*$of_options[] = array( 	"name" 		=> "Media Uploader 3.5",
 						"desc" 		=> "Upload images using native media uploader from Wordpress 3.5+.",
 						"id" 		=> "media_upload_35",
 						// Use the shortcodes [site_url] or [site_url_secure] for setting default URLs
@@ -900,14 +913,14 @@ $of_options[] = array( 	"name" 		=> "Switch 4",
 						"std" 		=> 0,
 						"folds"		=> 1,
 						"type" 		=> "switch"
-				);
+				);*/
 				
-$of_options[] = array( 	"name" 		=> "Hidden option 1",
+/*$of_options[] = array( 	"name" 		=> "Hidden option 1",
 						"desc" 		=> "This is a sample hidden option controlled by a <strong>switch</strong> button",
 						"id" 		=> "hidden_switch_ex1",
 						"std" 		=> "Hi, I\'m just a text input - nr 1",
 						"fold" 		=> "switch_ex4", /* the switch hook */
-						"type" 		=> "text"
+/*						"type" 		=> "text"
 				);
 				
 $of_options[] = array( 	"name" 		=> "Hidden option 2",
@@ -915,7 +928,7 @@ $of_options[] = array( 	"name" 		=> "Hidden option 2",
 						"id" 		=> "hidden_switch_ex2",
 						"std" 		=> "Hi, I\'m just a text input - nr 2",
 						"fold" 		=> "switch_ex4", /* the switch hook */
-						"type" 		=> "text"
+/*						"type" 		=> "text"
 				);
 				
 				
@@ -946,11 +959,50 @@ $of_options[] = array( 	"name" 		=> "Typography",
 						"id" 		=> "custom_type",
 						"std" 		=> array('size' => '12px','style' => 'bold italic'),
 						"type" 		=> "typography"
+				); */
+
+
+/*****************************************************
+*****  GENERAL SETTINGS TAB *****
+******************************************************/
+$of_options[] = array( 	"name" 		=> "General Settings",
+						"type" 		=> "heading"
 				);
+
+					
+/*$url =  ADMIN_DIR . 'assets/images/';
+$of_options[] = array( 	"name" 		=> "Main Layout",
+						"desc" 		=> "Select main content and sidebar alignment. Choose between 1, 2 or 3 column layout.",
+						"id" 		=> "layout",
+						"std" 		=> "2c-l-fixed.css",
+						"type" 		=> "images",
+						"options" 	=> array(
+							'1col-fixed.css' 	=> $url . '1col.png',
+							'2c-r-fixed.css' 	=> $url . '2cr.png',
+							'2c-l-fixed.css' 	=> $url . '2cl.png',
+							'3c-fixed.css' 		=> $url . '3cm.png',
+							'3c-r-fixed.css' 	=> $url . '3cr.png'
+						)
+				);*/
+				
+$of_options[] = array( 	"name" 		=> "Tracking Code",
+						"desc" 		=> "Paste your Google Analytics (or other) tracking code here. This will be added into the footer template of your theme.",
+						"id" 		=> "google_analytics",
+						"std" 		=> "",
+						"type" 		=> "textarea"
+				);
+				
+$of_options[] = array( 	"name" 		=> "Footer Text",
+						"desc" 		=> "You can use the following shortcodes in your footer text: [wp-link] [theme-link] [loginout-link] [blog-title] [blog-link] [the-year]",
+						"id" 		=> "footer_text",
+						"std" 		=> "Powered by [wp-link]. Built on the [theme-link].",
+						"type" 		=> "textarea"
+				);
+
 /*****************************************************
 *****  TYPOGRAPHY TAB *****
 ******************************************************/
-$of_options[] = array( "name" => "Typography Options",
+		$of_options[] = array( "name" => "Typography Options",
             "type" => "heading");
 
 		$of_options[] = array( "name" => "Google Fonts",
@@ -988,42 +1040,9 @@ $of_options[] = array( "name" => "Typography Options",
             "type" => "select",
             "options" => $google_fonts);
 
-/*****************************************************
-*****  GENERAL SETTINGS TAB *****
-******************************************************/
-$of_options[] = array( 	"name" 		=> "General Settings",
-						"type" 		=> "heading"
-				);
-
-					
-$url =  ADMIN_DIR . 'assets/images/';
-$of_options[] = array( 	"name" 		=> "Main Layout",
-						"desc" 		=> "Select main content and sidebar alignment. Choose between 1, 2 or 3 column layout.",
-						"id" 		=> "layout",
-						"std" 		=> "2c-l-fixed.css",
-						"type" 		=> "images",
-						"options" 	=> array(
-							'1col-fixed.css' 	=> $url . '1col.png',
-							'2c-r-fixed.css' 	=> $url . '2cr.png',
-							'2c-l-fixed.css' 	=> $url . '2cl.png',
-							'3c-fixed.css' 		=> $url . '3cm.png',
-							'3c-r-fixed.css' 	=> $url . '3cr.png'
-						)
-				);
-				
-$of_options[] = array( 	"name" 		=> "Tracking Code",
-						"desc" 		=> "Paste your Google Analytics (or other) tracking code here. This will be added into the footer template of your theme.",
-						"id" 		=> "google_analytics",
-						"std" 		=> "",
-						"type" 		=> "textarea"
-				);
-				
-$of_options[] = array( 	"name" 		=> "Footer Text",
-						"desc" 		=> "You can use the following shortcodes in your footer text: [wp-link] [theme-link] [loginout-link] [blog-title] [blog-link] [the-year]",
-						"id" 		=> "footer_text",
-						"std" 		=> "Powered by [wp-link]. Built on the [theme-link].",
-						"type" 		=> "textarea"
-				);
+/*
+////// STYLING OPTIONS
+*/
 				
 $of_options[] = array( 	"name" 		=> "Styling Options",
 						"type" 		=> "heading"
@@ -1057,13 +1076,13 @@ $of_options[] = array( 	"name" 		=> "Footer Background Color",
 						"std" 		=> "",
 						"type" 		=> "color"
 				);
-				
+	/*			
 $of_options[] = array( 	"name" 		=> "Body Font",
 						"desc" 		=> "Specify the body font properties",
 						"id" 		=> "body_font",
 						"std" 		=> array('size' => '12px','face' => 'arial','style' => 'normal','color' => '#000000'),
 						"type" 		=> "typography"
-				);  
+				);  */
 				
 $of_options[] = array( 	"name" 		=> "Custom CSS",
 						"desc" 		=> "Quickly add some CSS to your theme by adding it to this block.",
@@ -1071,7 +1090,10 @@ $of_options[] = array( 	"name" 		=> "Custom CSS",
 						"std" 		=> "",
 						"type" 		=> "textarea"
 				);
-				
+	
+/*
+////// EXAMPLE OPTIONS
+
 $of_options[] = array( 	"name" 		=> "Example Options",
 						"type" 		=> "heading"
 				);
@@ -1226,8 +1248,12 @@ $of_options[] = array( 	"name" 		=> "Select a Category",
 						"type" 		=> "select",
 						"options" 	=> $of_categories
 				);
+
+*/
 				
 //Advanced Settings
+
+/*
 $of_options[] = array( 	"name" 		=> "Advanced Settings",
 						"type" 		=> "heading"
 				);
@@ -1245,7 +1271,7 @@ $of_options[] = array( 	"name" 		=> "Hidden option 1",
 						"id" 		=> "hidden_option_1",
 						"std" 		=> "Hi, I\'m just a text input",
 						"fold" 		=> "offline", /* the checkbox hook */
-						"type" 		=> "text"
+/*						"type" 		=> "text"
 				);
 				
 $of_options[] = array( 	"name" 		=> "Hidden option 2",
@@ -1253,7 +1279,7 @@ $of_options[] = array( 	"name" 		=> "Hidden option 2",
 						"id" 		=> "hidden_option_2",
 						"std" 		=> "Hi, I\'m just a text input",
 						"fold" 		=> "offline", /* the checkbox hook */
-						"type" 		=> "text"
+/*						"type" 		=> "text"
 				);
 				
 $of_options[] = array( 	"name" 		=> "Hello there!",
@@ -1292,6 +1318,8 @@ $of_options[] = array( 	"name" 		=> "Hello there!",
 										"std" 		=> "#2098a8",
 										"type" 		=> "color"
 								);
+
+*/
 				
 // Backup Options
 $of_options[] = array( 	"name" 		=> "Backup Options",
