@@ -102,6 +102,7 @@ body {
 }
 
 <?php
+/////////// NAV FONTS
 if(!$custom_font && $data['google_nav'] != 'Select Font') {
   $nav_font = '"'.$data['google_nav'].'", Arial, Helvetica, sans-serif !important';
 } elseif(!$custom_font && $data['standard_nav'] != 'Select Font') {
@@ -115,6 +116,22 @@ if(isset($nav_font)):
 }
 
 <?php endif; ?>
+<?php
+////////// HEADING FONTS 
+if(!$custom_font && $data['google_headings'] != 'Select Font') {
+  $headings_font = '"'.$data['google_headings'].'", Arial, Helvetica, sans-serif !important';
+} elseif(!$custom_font && $data['standard_headings'] != 'Select Font') {
+  $headings_font = $data['standard_headings'].' !important';
+}
+if(isset($headings_font)):
+?>
+#content h1,
+.columns-item h3{ /*fjalla one */
+  font-family: <?php echo $headings_font; ?>;
+} 
+
+<?php endif; 
+/////////////////////////////////////?>
 
 #info_modal form button {
   font:15px/18px 'Varela Round', Arial, Helvetica, sans-serif;
@@ -144,13 +161,13 @@ if(isset($nav_font)):
   font:13px/16px 'Varela Round', Arial, Helvetica, sans-serif;
 }
 
-.columns-item h3{
+/*.columns-item h3{
   font:18px/22px 'Fjalla One', Arial, Helvetica, sans-serif;
-}
+}*/
 
-#content h1{
+/*#content h1{
 font:30px/36px 'Fjalla One', Arial, Helvetica, sans-serif;
-  }
+  }*/
 
 .restaurant-box .image-box a{
   font:12px/15px 'Varela', Arial, Helvetica, sans-serif;
