@@ -101,9 +101,20 @@ body {
   font:16px/20px 'Varela Round', Arial, Helvetica, sans-serif;
 }
 
-#nav ul{
-  font:13px/16px 'Varela Round', Arial, Helvetica, sans-serif;
+<?php
+if(!$custom_font && $data['google_nav'] != 'Select Font') {
+  $nav_font = '"'.$data['google_nav'].'", Arial, Helvetica, sans-serif !important';
+} elseif(!$custom_font && $data['standard_nav'] != 'Select Font') {
+  $nav_font = $data['standard_nav'].' !important';
 }
+if(isset($nav_font)):
+?>
+
+#nav ul{
+  font:13px/16px <?php echo $nav_font; ?>;
+}
+
+<?php endif; ?>
 
 #info_modal form button {
   font:15px/18px 'Varela Round', Arial, Helvetica, sans-serif;

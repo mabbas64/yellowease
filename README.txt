@@ -5,3 +5,5 @@ initial change push.
 ----- found this after a lot of searching!
 -------
 ------- $bg_images_url and $bg_images_path store the url to pattern background iamges  http://i.imgur.com/Ax6jri5.jpg
+
+--- added google fonts to header.php 
