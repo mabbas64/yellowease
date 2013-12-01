@@ -1062,13 +1062,14 @@ $of_options[] = array( 	"name" 		=> "Body Background Color",
 						"std" 		=> "",
 						"type" 		=> "color"
 				);
-				
+/*				
 $of_options[] = array( 	"name" 		=> "Header Background Color",
 						"desc" 		=> "Pick a background color for the header (default: #fff).",
 						"id" 		=> "header_background",
 						"std" 		=> "",
 						"type" 		=> "color"
 				);
+*/
 				
 $of_options[] = array( 	"name" 		=> "Footer Background Color",
 						"desc" 		=> "Pick a background color for the footer (default: #fff).",

@@ -119,6 +119,22 @@ if(isset($nav_font)):
 
 <?php endif; ?>
 <?php
+////////// BACKGROUND COLORS
+if($data['body_background']):
+  ?>
+  body{
+    background-color: <?php echo $data['body_background']; ?>
+  }
+  <?php
+endif;
+
+if($data['footer_background']):
+  ?>
+  #footer{
+    background-color: <?php echo $data['footer_background']; ?>
+  }
+  <?php
+endif;
 ////////// HEADING FONTS 
 if(!$custom_font && $data['google_headings'] != 'Select Font') {
   $headings_font = '"'.$data['google_headings'].'", Arial, Helvetica, sans-serif !important';
