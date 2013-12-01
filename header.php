@@ -283,8 +283,12 @@ font:30px/36px 'Fjalla One', Arial, Helvetica, sans-serif;
 a.get-directions {
   font:15px/18px 'Varela Round', Arial, Helvetica, sans-serif;
 }
+/* custom CSS from Theme Options */
+<?php echo $data['custom_css']; ?>
 
 </style>
+
+<?php echo $data['space_head']; ?>
 
 </head>
 <body>

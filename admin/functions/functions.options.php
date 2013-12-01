@@ -993,9 +993,9 @@ $of_options[] = array( 	"name" 		=> "Tracking Code",
 				);
 				
 $of_options[] = array( 	"name" 		=> "Footer Text",
-						"desc" 		=> "You can use the following shortcodes in your footer text: [wp-link] [theme-link] [loginout-link] [blog-title] [blog-link] [the-year]",
+						"desc" 		=> "Add any content that you want in the bottom-most area of the page.",
 						"id" 		=> "footer_text",
-						"std" 		=> "Powered by [wp-link]. Built on the [theme-link].",
+						"std" 		=> "&copy; 2013 Yellow Ease. All rights reserved.",
 						"type" 		=> "textarea"
 				);
 

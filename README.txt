@@ -8,3 +8,5 @@ initial change push.
 
 --- added google fonts to header.php 
 --- icons for custom ThemeOption tabs can be added from /admin-style.css . the icon should be in admin/assets/images folder of theme options.
+
+-- hidden smof_footer_info in admin-style.css to not show teh SMOF credit text at bottom of ThemeOptions tabs

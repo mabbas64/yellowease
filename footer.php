@@ -1,3 +1,4 @@
+<?php global $data; ?>
 <footer id="footer">
 	<div class="f1">
 		<div class="footer-holder">
@@ -62,7 +63,7 @@
 				<li><a href="<?php site_url(); ?>/yellowease/privacy">Privacy</a></li>
 				<li><a href="<?php site_url(); ?>/yellowease/contact">Contact</a></li>
 			</ul>
-			<span>&copy; 2013 Yellow Ease. All rights reserved.</span>
+			<span><?php echo $data['footer_text'] ?></span>
 		</div>
 	</div>
 </footer>
@@ -76,5 +77,7 @@
   ga('send', 'pageview');
 
 </script>
+
+<?php echo $data['google_analytics']; ?>
 </body>
 </html>
