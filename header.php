@@ -102,23 +102,6 @@ $urlloc = ( isset( $_GET['location'] ) || isset( $_GET['where'] ) ) ? true : fal
   font:16px/20px 'Varela Round', Arial, Helvetica, sans-serif;
 }*/
 
-<?php
-/////////// NAV FONTS
-if(!$custom_font && $data['google_nav'] != 'Select Font') {
-  $nav_font = '"'.$data['google_nav'].'", Arial, Helvetica, sans-serif !important';
-} elseif(!$custom_font && $data['standard_nav'] != 'Select Font') {
-  $nav_font = $data['standard_nav'].' !important';
-}
-if(isset($nav_font)):
-?>
-
-#locations_header ul a,
-.search-form input[type="text"],
-#nav ul{
-  font:13px/16px <?php echo $nav_font; ?>;
-}
-
-<?php endif; ?>
 /* ======= Background Colors from Theme Options ====== */
 <?php
 ////////// BACKGROUND COLORS
@@ -137,6 +120,28 @@ if($data['footer_background']):
   }
   <?php
 endif;
+?>
+
+
+<?php
+/////////// NAV FONTS
+if(!$custom_font && $data['google_nav'] != 'Select Font') {
+  $nav_font = '"'.$data['google_nav'].'", Arial, Helvetica, sans-serif !important';
+} elseif(!$custom_font && $data['standard_nav'] != 'Select Font') {
+  $nav_font = $data['standard_nav'].' !important';
+}
+if(isset($nav_font)):
+?>
+
+  #locations_header ul a,
+  .search-form input[type="text"],
+  #nav ul{
+    font-family: <?php echo $nav_font; ?>;
+  }
+
+<?php endif; ?>
+
+<?php
 ////////// HEADING FONTS 
 if(!$custom_font && $data['google_headings'] != 'Select Font') {
   $headings_font = '"'.$data['google_headings'].'", Arial, Helvetica, sans-serif !important';
@@ -146,12 +151,12 @@ if(!$custom_font && $data['google_headings'] != 'Select Font') {
 if(isset($headings_font)):
 ?>
 
-#content h1,
-.columns-item h3,
-#sidebar h3,
-#sidebar h4{ /*fjalla one */
-  font-family: <?php echo $headings_font; ?>;
-} 
+  #content h1,
+  .columns-item h3,
+  #sidebar h3,
+  #sidebar h4{ /*fjalla one */
+    font-family: <?php echo $headings_font; ?>;
+  } 
 
 <?php endif; 
 ////////// BODY FONTS 
@@ -164,12 +169,36 @@ if($data['google_body'] != 'Select Font') {
 
 if(isset($body_font)): ?>
 
-body{ /*'Quattrocento'*/
-  font-family:<?php echo $body_font; ?>;
-}
+  body{ /*'Quattrocento'*/
+    font-family:<?php echo $body_font; ?>;
+  }
 
 <?php endif; 
 /////////////////////////////////////?>
+
+<?php ////////////////////////////
+///////// FONT SIZES /////////////?>
+<?php if($data['body_font_size']): ?>
+  body,
+  .columns-item ul{
+    font-size:<?php echo $data['body_font_size']; ?>px !important;
+    <?php
+    $line_height = round((1.5 * $data['body_font_size']));
+    ?>
+    /*line-height:<?php echo $line_height; ?>px;*/
+    line-height: 24px !important;
+  }
+<?php endif; ?>
+<?php if($data['nav_font_size']): ?>
+  #nav ul{
+    font-size:<?php echo $data['nav_font_size']; ?>px !important;
+    <?php
+    $line_height = round((1.5 * $data['body_font_size']));
+    ?>
+    /*line-height:<?php echo $line_height; ?>px;*/
+    line-height: 16px !important;
+  }
+<?php endif; ?>
 
 #info_modal form button {
   font:15px/18px 'Varela Round', Arial, Helvetica, sans-serif;

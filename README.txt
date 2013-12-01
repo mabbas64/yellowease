@@ -11,3 +11,5 @@ initial change push.
 
 -- hidden smof_footer_info in admin-style.css to not show teh SMOF credit text at bottom of ThemeOptions tabs
 -- Updated the stylesheet reader code in functions.options.php so it fetches the alternate css files from root of theme folder instaed of the /admin/layouts area.
+
+---The stylesheet selector in Theme Options should control which style1.css or style2.css etc are added in the header. this happesn on the fly. ThemeOptions by default looks for these stylesehets in admin/layout folder, i've modified it so the files are picked up from theme root. Also add JS to remove the second instance of stylesheet that the parent theme adds automatically for this child theme. need that removed so that if style2.css is selected in theme options, the auto-added style.css shouldnt override all its css rules

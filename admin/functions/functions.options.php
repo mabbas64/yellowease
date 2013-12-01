@@ -1043,6 +1043,27 @@ $of_options[] = array( 	"name" 		=> "Footer Text",
             "type" => "select",
             "options" => $google_fonts);
 
+        $of_options[] = array( "name" => "Standard Fonts",
+            "desc" => "",
+            "id" => "font_size_intro",
+            "std" => "<h3 style='margin: 0;'>Font Sizes</h3>",
+            "icon" => true,
+            "type" => "info");
+
+        $of_options[] = array( "name" => "Body Font Size (px)",
+            "desc" => "Default is 14",
+            "id" => "body_font_size",
+            "std" => "15",
+            "type" => "select",
+            "options" => $font_sizes);
+
+        $of_options[] = array( "name" => "Top Nav Font Size (px)",
+            "desc" => "Default is 13",
+            "id" => "nav_font_size",
+            "std" => "14",
+            "type" => "select",
+            "options" => $font_sizes);
+
 /*
 ////// STYLING OPTIONS
 */
