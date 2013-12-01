@@ -1075,7 +1075,7 @@ $of_options[] = array( 	"name" 		=> "Styling Options",
 $of_options[] = array( 	"name" 		=> "Theme Stylesheet",
 						"desc" 		=> "Select your themes alternative color scheme.",
 						"id" 		=> "alt_stylesheet",
-						"std" 		=> "default.css",
+						"std" 		=> "style.css",
 						"type" 		=> "select",
 						"options" 	=> $alt_stylesheets
 				);
