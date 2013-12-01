@@ -40,7 +40,7 @@ if( function_exists( 'wp_get_theme' ) ) {
 	//$theme_version = $theme_obj->get('Version');
 	$theme_version = '1.0';	
 	//$theme_name = $theme_obj->get('Name');
-	$theme_name = 'Yellow Ease';
+	$theme_name = 'YellowEase';
 	$theme_uri = $theme_obj->get('ThemeURI');
 	$author_uri = $theme_obj->get('AuthorURI');
 } else {

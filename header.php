@@ -12,7 +12,8 @@ $urlloc = ( isset( $_GET['location'] ) || isset( $_GET['where'] ) ) ? true : fal
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
 	<link href='http://fonts.googleapis.com/css?family=Quattrocento:400,700|Varela+Round|Oxygen:400,700|Fjalla+One|Varela|Satisfy' rel='stylesheet' type='text/css'>
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
-  <link type="text/css" rel="stylesheet" href="<?php echo bloginfo('stylesheet_directory'); ?>/style.css">
+
+  <link type="text/css" rel="stylesheet" href="<?php echo bloginfo('stylesheet_directory'); ?>/<?php echo $data['alt_stylesheet']; ?>">
 	<script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory'); ?>/js/jquery-1.8.3.min.js"></script>
   <script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory'); ?>/js/main.js"></script>
 	<script type="text/javascript" src="<?php echo bloginfo('stylesheet_directory'); ?>/js/location.js"></script>
@@ -118,6 +119,7 @@ if(isset($nav_font)):
 }
 
 <?php endif; ?>
+/* ======= Background Colors from Theme Options ====== */
 <?php
 ////////// BACKGROUND COLORS
 if($data['body_background']):

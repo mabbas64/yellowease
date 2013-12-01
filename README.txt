@@ -10,3 +10,4 @@ initial change push.
 --- icons for custom ThemeOption tabs can be added from /admin-style.css . the icon should be in admin/assets/images folder of theme options.
 
 -- hidden smof_footer_info in admin-style.css to not show teh SMOF credit text at bottom of ThemeOptions tabs
+-- Updated the stylesheet reader code in functions.options.php so it fetches the alternate css files from root of theme folder instaed of the /admin/layouts area.

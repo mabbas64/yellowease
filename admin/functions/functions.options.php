@@ -41,9 +41,12 @@ if (!function_exists('of_options'))
 
 
 		//Stylesheets Reader
-		$alt_stylesheet_path = LAYOUT_PATH;
+		//$alt_stylesheet_path = LAYOUT_PATH;
+		$alt_stylesheet_path = get_theme_root() .'/yellowease_template';
+		//print_r(get_stylesheet_directory_uri());
 		$alt_stylesheets = array();
 		
+
 		if ( is_dir($alt_stylesheet_path) ) 
 		{
 		    if ($alt_stylesheet_dir = opendir($alt_stylesheet_path) ) 
@@ -816,7 +819,7 @@ $of_options[] = array( 	"name" 		=> "Home Settings",
 $of_options[] = array( 	"name" 		=> "Hello there!",
 						"desc" 		=> "",
 						"id" 		=> "introduction",
-						"std" 		=> "<h3 style=\"margin: 0 0 10px;\">Welcome to Yellow Ease Theme-Options!</h3>
+						"std" 		=> "<h3 style=\"margin: 0 0 10px;\">Welcome to YellowEase Theme-Options!</h3>
 						Please try the different tabs to see all the options this theme offers.",
 						"icon" 		=> true,
 						"type" 		=> "info"
